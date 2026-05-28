@@ -1,6 +1,6 @@
-#Cadastro de nomes 1
+# #Cadastro de nomes 1
 
-# nomes = []
+nomes = []
 while True:
     n1 = input("Digite o Primeiro nome: ")
     n2 = input("Digite o Segundo nome: ")
@@ -16,14 +16,14 @@ while True:
     break
 print("Lista concluida")
 
-#Removendo elementos 2
+# #Removendo elementos 2
 nomes=["maçã", "banana", "Uva", "Laranja"]
 nomes.remove("Uva")
 nomes.append("Morango")
 print(nomes)
 
-
-#Soma dos Números 3
+#-------------------------------------------------------------------
+# #Soma dos Números 3 
 numeros = []
 while True:
     n1 = int(input("Digite o Primeiro número: "))
@@ -38,17 +38,27 @@ while True:
     numeros.append(n5)
     print(f"A soma dos números é: {n1 + n2 + n3 + n4 + n5}")
     break
+#OU
+numeros = []
+for i in range(5):
+    numero = int(input(f"Digite o {i + 1}º número: "))
+    numeros.append(numero)
+    soma = 0
+    for numero in numeros:
+        soma += numero
+print(f"A soma dos números é: {soma}")
 
-#Numeros pares 4
+#-------------------------------------------------------------------
+# #Numeros pares 4
 numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 pares = []
 for numero in numeros:
     if numero % 2 == 0:
         pares.append(numero)
 print(f"Números pares: {pares}")
+#-------------------------------------------------------------------
 
-
-#Verificação de aluno aprovado 5
+# #Verificação de aluno aprovado 5
 lista_notas = []
 while True:
     nota1 = float(input("Digite a primeira nota: "))
@@ -65,23 +75,38 @@ while True:
     else:
         print(f"Aluno reprovado com média {media:.2f}")
     break
+#OU
+notas = []
+soma = 0
+for i in range(4):
+    nota = float(input(f"Digite a nota: "))
+    notas.append(nota)
+for nota in notas:
+    soma += nota
+media = soma / len(notas)
+if media >= 7:
+    print(f"Aluno aprovado com média {media:.2f}")
+else:
+    print(f"Aluno reprovado com média {media:.2f}")
 
-#Pesquisa em lista 6
+    
+#-------------------------------------------------------------------
+# #Pesquisa em lista 6
 nomes = ["joão", "maria", "ives", "mariana", "gabriel"]
 pesquisa = input("Digite o seu nome")
 if pesquisa in nomes:
     print("Aluno encontrado")
 else:    print("Aluno não encontrado")
+#-------------------------------------------------------------------
 
-
-#Contagem de elementos 7
+# #Contagem de elementos 7
 lista = [1, 5, 7, 9, 12, 30, 50, 70]
 print(f"A quantidade total de elementos é: {len(lista)}")
 print(f"O maior número da lista é: {max(lista)}")
 print(f"O menor número da lista é: {min(lista)}")
+#--------------------------------------------------------------------
 
-
-#Sistema simples de tarefas 8
+# #Sistema simples de tarefas 8
 tarefas = []
 for i in range(3):
     tarefa = input(f"Digite a {i + 1}ª tarefa: ")
@@ -98,3 +123,4 @@ else:
 print("\nLista atualizada:")
 for i, tarefa in enumerate(tarefas, start=1):
     print(f"{i}. {tarefa}")
+    
